@@ -31,7 +31,8 @@ public class TriggerExit : MonoBehaviour
         yield return new WaitForSeconds(delay);
 
         // Destroy the LevelBlock
-        Utils.ForceCrash(ForcedCrashCategory.Abort);
+        //Utils.ForceCrash(ForcedCrashCategory.Abort);
+        Destroy(transform.parent.gameObject); // Destroy the parent object of trigger exit
     }
 
 }
