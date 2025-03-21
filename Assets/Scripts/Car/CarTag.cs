@@ -9,7 +9,7 @@ public class CarTag : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         // TODO: Insert collision code :)
-        if (collision.gameObject.CompareTag("TeamWalls"))
+        if (collision.gameObject.CompareTag("TeamWalls")) //have added this collision to walls
         {
             Debug.LogError("WHy u hit walls");
             //Utils.ForceCrash(ForcedCrashCategory.Abort);

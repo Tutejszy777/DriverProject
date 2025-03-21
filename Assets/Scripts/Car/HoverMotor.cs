@@ -44,7 +44,7 @@ public class HoverMotor : MonoBehaviour
 
     void Awake()
     {
-        carMain = GetComponent<Rigidbody>();
+        carMain = GetComponent<Rigidbody>(); //have added creation of an instance of a car
         StartCoroutine(DriveCar());
     }
 
@@ -55,7 +55,7 @@ public class HoverMotor : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (carMain != null)
+        if (carMain != null) //have added a check for null
         {
             UpdateFloating();
             UpdateTurning();
