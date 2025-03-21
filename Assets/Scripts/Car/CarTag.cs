@@ -12,9 +12,12 @@ public class CarTag : MonoBehaviour
         if (collision.gameObject.CompareTag("TeamWalls")) //have added this collision to walls
         {
             Debug.LogError("WHy u hit walls");
-            //Utils.ForceCrash(ForcedCrashCategory.Abort);
         }
 
+        if (collision.gameObject.CompareTag("TeamObstacles")) //have added this collision to walls
+        {
+            Debug.LogError("WHy u hit Obstacles");
+        }
 
         // One example for you, please follow this example making other collisions
         if (collision.gameObject.CompareTag("TeamTrees"))
