@@ -19,7 +19,7 @@ public class CanvasManager : MonoBehaviour
     
     void Start()
     {
-        startTime = Time.time;
+        startTime = Time.time + 3; //3 seconds delay for animation
     }
 
     // Update is called once per frame
@@ -31,7 +31,7 @@ public class CanvasManager : MonoBehaviour
     public void UpdateTime()
     {
         elapsedTime = Time.time - startTime;
-        timeText.text = "Time: " + elapsedTime.ToString("F2");
+        timeText.text = "Time \n" + elapsedTime.ToString("F2");
     }
 
     public void EndGame()

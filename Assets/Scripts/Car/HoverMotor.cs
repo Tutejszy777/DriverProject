@@ -44,8 +44,19 @@ public class HoverMotor : MonoBehaviour
 
     void Awake()
     {
+        StartCoroutine(PauseCoroutine());
         carMain = GetComponent<Rigidbody>(); //have added creation of an instance of a car
         StartCoroutine(DriveCar());
+    }
+
+    private IEnumerator PauseCoroutine()
+    {
+        float tmp = speed;
+        speed = 0;
+
+        yield return new WaitForSecondsRealtime(3);
+
+        speed = tmp;
     }
 
     void Update()
