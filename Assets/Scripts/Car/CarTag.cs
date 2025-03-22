@@ -15,7 +15,7 @@ public class CarTag : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("TeamObstacles")) //have added this collision to walls
         {
-            Debug.Log("Obstacle hit");
+            Debug.LogError("WHy u hit obstacles");
         }
         else if (collision.gameObject.CompareTag("TeamTrees"))
         {

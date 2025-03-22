@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5935689001910410752}
   - component: {fileID: 6862262876270679284}
   - component: {fileID: 2707934779337270228}
-  - component: {fileID: 5389854753048533035}
+  - component: {fileID: 4945408971170037731}
   m_Layer: 0
   m_Name: CactusPrefab
   m_TagString: TeamObstacles
@@ -114,7 +114,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &5389854753048533035
+--- !u!114 &4945408971170037731
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -123,6 +123,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 5935689001912948208}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd8e9af418e2d9c46916e85edcb6abea, type: 3}
+  m_Script: {fileID: 11500000, guid: eb983dab90d53cc42beb7bbb06416d7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
