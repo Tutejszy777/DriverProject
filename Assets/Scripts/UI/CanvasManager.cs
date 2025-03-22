@@ -31,6 +31,7 @@ public class CanvasManager : MonoBehaviour
     public void UpdateTime()
     {
         elapsedTime = Time.time - startTime;
+        timeText.text = "Time: " + elapsedTime.ToString("F2");
     }
 
     public void EndGame()
@@ -43,6 +44,7 @@ public class CanvasManager : MonoBehaviour
     {
         // TODO: Restart the game
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Time.timeScale = 1;
     }
 
     public void QuitGame()

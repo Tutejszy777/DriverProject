@@ -17,21 +17,28 @@ public class CarTag : MonoBehaviour
         // TODO: Insert collision code :)
         if (collision.gameObject.CompareTag("TeamWalls")) //have added this collision to walls
         {
-            canvasManager.EndGame();
+            stopTheGame();
         }
         else if (collision.gameObject.CompareTag("TeamObstacles")) //have added this collision to walls
         {
-            canvasManager.EndGame();
+            stopTheGame();
+
         }
         else if (collision.gameObject.CompareTag("TeamTrees"))
         {
-            canvasManager.EndGame();
+            stopTheGame();
             //Utils.ForceCrash(ForcedCrashCategory.Abort);
         }
         else if (collision.gameObject.CompareTag("Untagged"))
         {
             Debug.LogError("Undefined Object hit - please set the Tag");
         }
+    }
+
+    private void stopTheGame()
+    {
+        canvasManager.EndGame();
+        Time.timeScale = 0;
     }
 
 }
