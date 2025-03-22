@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class CanvasManager : MonoBehaviour
@@ -34,15 +36,18 @@ public class CanvasManager : MonoBehaviour
     public void EndGame()
     {
         // TODO: Setup EndGame Panel
+        endGamePanel.SetActive(true);
     }
 
     public void RestartGame()
     {
         // TODO: Restart the game
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void QuitGame()
     {
         // TODO: Quit Game
+        Application.Quit();
     }
 }

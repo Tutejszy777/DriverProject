@@ -5,21 +5,27 @@ using UnityEngine.Diagnostics;
 
 public class CarTag : MonoBehaviour
 {
+    public CanvasManager canvasManager;
+
+    void Start()
+    {
+        canvasManager = GameObject.FindObjectOfType<CanvasManager>();
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
         // TODO: Insert collision code :)
         if (collision.gameObject.CompareTag("TeamWalls")) //have added this collision to walls
         {
-            Debug.LogError("WHy u hit walls");
+            canvasManager.EndGame();
         }
         else if (collision.gameObject.CompareTag("TeamObstacles")) //have added this collision to walls
         {
-            Debug.LogError("WHy u hit obstacles");
+            canvasManager.EndGame();
         }
         else if (collision.gameObject.CompareTag("TeamTrees"))
         {
-            Debug.LogError("WHy u hit treees");
+            canvasManager.EndGame();
             //Utils.ForceCrash(ForcedCrashCategory.Abort);
         }
         else if (collision.gameObject.CompareTag("Untagged"))
