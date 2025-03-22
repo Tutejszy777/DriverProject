@@ -13,19 +13,15 @@ public class CarTag : MonoBehaviour
         {
             Debug.LogError("WHy u hit walls");
         }
-
-        if (collision.gameObject.CompareTag("TeamObstacles")) //have added this collision to walls
+        else if (collision.gameObject.CompareTag("TeamObstacles")) //have added this collision to walls
         {
-            Debug.LogError("WHy u hit Obstacles");
+            Debug.Log("Obstacle hit");
         }
-
-        // One example for you, please follow this example making other collisions
-        if (collision.gameObject.CompareTag("TeamTrees"))
+        else if (collision.gameObject.CompareTag("TeamTrees"))
         {
             Debug.LogError("WHy u hit treees");
             //Utils.ForceCrash(ForcedCrashCategory.Abort);
         }
-        // Do not delete the section below - this is to guide you
         else if (collision.gameObject.CompareTag("Untagged"))
         {
             Debug.LogError("Undefined Object hit - please set the Tag");
