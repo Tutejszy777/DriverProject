@@ -19,7 +19,7 @@ public class CanvasManager : MonoBehaviour
     
     void Start()
     {
-        
+        startTime = Time.time;
     }
 
     // Update is called once per frame
