@@ -38,6 +38,20 @@ public class CanvasManager : MonoBehaviour
     {
         // TODO: Setup EndGame Panel
         endGamePanel.SetActive(true);
+
+        float checkTime = PlayerPrefs.GetFloat("BestScore",0);
+
+        if (elapsedTime > checkTime)
+        {
+            PlayerPrefs.SetFloat("BestScore", elapsedTime);
+            highScoreText.text = "New Best Score: \n" + elapsedTime.ToString("F2");
+        }
+        else
+        {
+            highScoreText.text = "Best Score: \n" + checkTime.ToString("F2");
+        }
+
+        runTimeText.text = "Current time: \n" + elapsedTime.ToString("F2");
     }
 
     public void RestartGame()
