@@ -7,6 +7,8 @@ TagManager:
   - TeamTrees
   - LevelBlock
   - TeamWalls
+  - TeamObstacles
+  - BlowUpParticles
   layers:
   - Default
   - TransparentFX
